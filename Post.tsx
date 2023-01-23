@@ -1,6 +1,8 @@
 import * as React from 'react';
 import './style.css';
 
+import Comment from './Comment';
+
 export default function Post(props) {
   return (
     <div className="center">
@@ -8,11 +10,10 @@ export default function Post(props) {
       <p>by {props.post.author}</p>
       <p>{props.post.body}</p>
       <h3>Comments:</h3>
-      <p> {props.post.comments[0]} </p>
 
-      {/* props.post.comments.map((comment) => (
-        <p> {comment} </p>
-      )) */}
+      {props.post.comments.map((comment) => (
+        <Comment body={comment} />
+      ))}
     </div>
   );
 }
