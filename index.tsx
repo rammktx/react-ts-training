@@ -6,6 +6,7 @@ import Post from './Post';
 
 const rootElement = document.getElementById('root');
 const root = createRoot(rootElement);
+const authors = ['Stealthy Stegosaurus', 'Tiny T-Rex', 'Ivory Iguanodon']
 const post = {
   title: 'Dinosaurs are awesome',
   author: 'Stealthy Stegosaurus',
@@ -14,6 +15,6 @@ const post = {
 };
 root.render(
   <StrictMode>
-    <Post post={post} />
+    <Post post={post} allAuthors={authors}/>
   </StrictMode>
 );
