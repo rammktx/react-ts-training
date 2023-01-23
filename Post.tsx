@@ -8,9 +8,10 @@ export default function Post(props) {
       <p>by {props.post.author}</p>
       <p>{props.post.body}</p>
       <h3>Comments:</h3>
-      {props.post.comments.map((comment) => (
+      <p> {props.post.comments[0]} </p>
+      {/* props.post.comments.map((comment) => (
         <p> {comment} </p>
-      ))}
+      )) */}
     </div>
   );
 }
